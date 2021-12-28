@@ -1,0 +1,23 @@
+---
+- mystudents : 
+
+   - name: prasad
+     phno: 8989898988
+     address: 
+         - doorno: 563
+         - street:  2nd 
+         - pincode: 6767676
+
+   - name: rama
+     phno: 89898989898
+     address: 
+      - doorno: 563
+      - street:  2nd 
+      - pincode: 6767676
+
+   - name: sai
+     phno: 7777777777
+     address: 
+        - doorno: 563
+        - street:  2nd 
+        - pincode: 6767676
