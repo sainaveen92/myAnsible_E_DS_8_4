@@ -22,7 +22,7 @@
 
   - name: i want to start webserver on only  RedHat nodes
     service:
-        name: apache2
+        name: httpd
         state: present
     when: ansible_os_family ="RedHat"
 
