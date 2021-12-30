@@ -7,13 +7,26 @@
       name: apache2
       state: present
     when: ansible_os_family=="Debian"
-    
-      
+         
   - name: i want to start webserver on only ubuntu nodes
     service:
       name: apache2
       state: started
     when: ansible_os_family =="Debian"
+
+  - name: install webserver on only RedHat nodes 
+    yum:
+      name: httpd
+      state: present
+    when: ansible_os_family =="RedHat"
+
+  - name: i want to start webserver on only  RedHat nodes
+    service:
+        name: apache2
+        state: present
+    when: ansible_os_family ="RedHat"
+
+
         
 
    
