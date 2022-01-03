@@ -1,6 +1,5 @@
 [mywebservers]
-172.31.35.159
-172.31.11.68
+172.31.22.205
 
 
 [myappservers]
@@ -14,7 +13,7 @@
 
 
 [myubuntuservers]
-172.31.35.159
+172.31.22.205s
 
 [myRedhatservers]
 172.31.11.68
