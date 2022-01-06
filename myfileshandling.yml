@@ -13,18 +13,28 @@
     template:
          src: myindex.j2
          dest: /var/www/html/index.html
+    notify:
+     - restartwebserver
 
   - name: downlaod remote files remote files
     get_url:
         url: https://get.jenkins.io/war-stable/2.319.1/jenkins.war
         dest: /home/ubuntu/jenkins.war
         force_basic_auth: yes
+        
 
   - name: i want to  to create directory
     file:
        path: /home/ubuntu/myfolder
        state: directory
 
+
+
+
+
+
+
+  handlers:
   - name: restartwebserver
     service:
        name: apache2
