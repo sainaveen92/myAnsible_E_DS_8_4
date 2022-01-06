@@ -8,6 +8,7 @@
       state: present
     notify:
      - restartapache2
+     - nodeos
     
 
   handlers:
@@ -15,7 +16,7 @@
     service:
          name: apache2
          state: restarted
-  - name: node os is 
+  - name: nodeos 
     debug:
        msg: "{{ansble_os_family}}"
 
