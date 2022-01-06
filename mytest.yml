@@ -15,4 +15,8 @@
     service:
          name: apache2
          state: restarted
+  - name: node os is 
+    debug:
+       msg: "{{ansble_os_family}}"
+
 
