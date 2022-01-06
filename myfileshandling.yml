@@ -25,6 +25,15 @@
        path: /home/ubuntu/myfolder
        state: directory
 
+  - name: restartwebserver
+    service:
+       name: apache2
+       state: restarted
+    
+
+
+
+
 
         
     
