@@ -10,6 +10,13 @@
      - restartapache2
      - nodeos
     
+  - name: create file
+    file:
+      path: /home/ubuntu/test
+      state: touch
+    notify:
+     - restartapache2
+     - nodeos
 
   handlers:
   - name: restartapache2
