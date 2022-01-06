@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - include_tasks: myfile.yml
-  
+
   - name: install webserver
     apt:
       name: apache2
@@ -19,6 +19,12 @@
         url: https://get.jenkins.io/war-stable/2.319.1/jenkins.war
         dest: /home/ubuntu/jenkins.war
         force_basic_auth: yes
+
+  - name: i want to  to create directory
+    file:
+       path: /home/ubuntu/myfolder
+       state: directory
+
 
         
     
