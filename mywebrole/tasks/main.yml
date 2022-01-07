@@ -1,2 +1,14 @@
 ---
 # tasks file for mywebrole
+
+- name: install web server
+  apt:
+     name: apache2
+     state: present
+     
+- name: i want to create file
+  file:
+    path: /home/maha/rolefile
+    state: touch
+  notify:
+  - debugvars
