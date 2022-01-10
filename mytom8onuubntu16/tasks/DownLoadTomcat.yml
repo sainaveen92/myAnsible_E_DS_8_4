@@ -1,0 +1,19 @@
+---
+- name: download remote tomcat tar file
+  get_url:
+    url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
+    dest: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
+    force_basic_auth: yes
+
+    # https://get.jenkins.io/war-stable/2.319.1/jenkins.war
+
+- name: create /opt/tomcat directory
+  file:
+     path: /opt/tomcat
+     state: directory
+
+- name: i want extract tar file, when it already exists, this step will not be run
+  command:
+      cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
+      creates: /opt/tomcat/LICENSE
+    
